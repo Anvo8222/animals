@@ -3,7 +3,7 @@ import {
   REQUEST_DATA,
   INCREMENT_TURN,
   DECREMENT_TURN,
-  SET_ANIMAL,
+  SET_ANIMAL_INDEX,
 } from './constants';
 
 export const setTurn = turn => ({
@@ -24,7 +24,7 @@ export const decrementTurn = (amount = 1) => ({
 export const requestData = () => ({
   type: REQUEST_DATA,
 });
-export const setAnimal = status => ({
-  type: SET_ANIMAL,
-  status,
+export const setAnimalIndex = animalIndex => ({
+  type: SET_ANIMAL_INDEX,
+  animalIndex,
 });

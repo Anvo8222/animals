@@ -101,12 +101,13 @@ export const homeStyle = StyleSheet.create({
     fontWeight: 'bold',
   },
   description: {
-    paddingRight: 16,
-    paddingLeft: 16,
     width: '100%',
     height: 180,
     maxHeight: 170,
-    overflow: 'hidden',
+    backgroundColor: 'rgba(0,255,255,0.5)',
+    borderRadius: 10,
+    paddingHorizontal: 16,
+    paddingVertical: 16,
   },
   textDescription: {
     fontSize: 16,

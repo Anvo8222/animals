@@ -5,24 +5,20 @@ import {
   SET_TURN,
   INCREMENT_TURN,
   DECREMENT_TURN,
-  SET_EGG_STATUS,
-  SET_ANIMAL,
+  SET_ANIMAL_INDEX,
 } from '../constants';
 
 export const initialState = {
   turn: 10,
-  animal: 2,
+  animalIndex: 2,
 };
 
 export default (state = initialState, action) =>
   produce(state, draft => {
     // eslint-disable-next-line default-case
     switch (action.type) {
-      case SET_EGG_STATUS:
-        draft.eggStatus = action.status;
-        break;
-      case SET_ANIMAL:
-        draft.animal = action.status;
+      case SET_ANIMAL_INDEX:
+        draft.animalIndex = action.animalIndex;
         break;
       case SET_TURN:
         AsyncStorage.setItem('@turn', JSON.stringify(action.turn));
